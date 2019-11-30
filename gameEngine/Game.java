@@ -1,13 +1,14 @@
 package gameEngine;
 
 import hero.Hero;
-import map.MiniMap;
-import java.util.*;
+import map.MiniMap;;import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Game {
-   protected MiniMap map;
-   protected ArrayList<Hero> heroes;
-   protected ArrayList<String> rounds;
+   private MiniMap map;
+   private ArrayList<Hero> heroes;
+   private ArrayList<String> rounds;
 
    private static Map<Character, Position> delta = new HashMap<>() {{
        put('U', new Position(-1,0));
@@ -19,8 +20,8 @@ public class Game {
 
    public Game(MiniMap map) {
        this.map = map;
-       heroes = new ArrayList<Hero>();
-       rounds = new ArrayList<String>();
+       heroes = new ArrayList<>();
+       rounds = new ArrayList<>();
    }
 
    public void addHero(Hero hero) {

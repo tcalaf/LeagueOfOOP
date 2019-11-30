@@ -1,12 +1,15 @@
 package main;
 
 import gameEngine.Game;
-import hero.Hero;
 import gameEngine.Position;
+import hero.HeroFactory;
 import map.MiniMap;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public final class Main {
     private Main() {
@@ -25,7 +28,7 @@ public final class Main {
 
         int heroes = input.nextInt();
         for (int heroId = 0; heroId < heroes; heroId++)
-            game.addHero(Hero.create(input.next().charAt(0), new Position(input.nextInt(), input.nextInt()), heroId));
+            game.addHero(HeroFactory.create(input.next().charAt(0), new Position(input.nextInt(), input.nextInt())));
 
         int rounds = input.nextInt();
         for (int round = 0; round < rounds; round++)
