@@ -1,209 +1,385 @@
 package constants;
 
-public class Constants {
-    private final static int baseXP = 0;
-    private final static int lvlOneConst = 250;
-    private final static int lvlMultiplier = 50;
-    private final static int baseLvl = 0;
-    private final static int pyromancerHP = 500;
-    private final static int pyromancerHPperLvl = 50;
-    private final static int knightHP = 900;
-    private final static int knightHPperLvl = 80;
-    private final static int rogueHP = 600;
-    private final static int rogueHPperLvl = 40;
-    private final static int wizardHP = 400;
-    private final static int wizardHPperLvl = 30;
-    private final static int fireblastDmg = 350;
-    private final static int fireblastDmgPerLvl = 50;
-    private final static int igniteDmg = 150;
-    private final static int igniteDmgPerLvl = 20;
-    private final static int igniteRoundDmg = 50;
-    private final static int igniteRoundLvlDmg = 30;
-    private final static int igniteDuration = 2;
-    private final static int executeDmg = 200;
-    private final static int executeDmgPerLvl = 30;
-    private final static float executeLowHPLimit = 0.2f;
-    private final static float executeLvlHPLimit = 0.01f;
-    private final static float executeMaxHPLimit = 0.4f;
-    private final static int slamDmg = 100;
-    private final static int slamDmgPerLvl = 40;
-    private final static int slamDuration = 1;
-    private final static float drainDmg = 0.2f;
-    private final static float drainDmgPerLvl = 0.05f;
-    private final static float drainHPLimit = 0.3f;
-    private final static float deflectDmg = 0.35f;
-    private final static float deflectDmgPerLvl = 0.02f;
-    private final static float deflectLimit= 0.7f;
-    private final static int backstabDmg = 200;
-    private final static int backstabDmgPerLvl = 20;
-    private final static float backstabCritical = 1.5f;
-    private final static int backstabCriticalGO= 3;
-    private final static int paralysisDmg = 40;
-    private final static int paralysisDmgPerLvl = 10;
-    private final static int paralysisDuration = 3;
-    private final static int paralysisWoodsDuration = 6;
+public final class Constants {
+    private Constants() {
+    }
+    private static final int BASEXP = 0;
+    private static final int LVL_ONE_CONST = 250;
+    private static final int LVL_MULTIPLIER = 50;
+    private static final int BASE_LVL = 0;
+    private static final int PYROMANCER_HP = 500;
+    private static final int PYROMANCER_HP_PER_LVL = 50;
+    private static final int KNIGHT_HP = 900;
+    private static final int KNIGHT_HP_LVL = 80;
+    private static final int ROGUE_HP = 600;
+    private static final int ROGUE_HP_LVL = 40;
+    private static final int WIZARD_HP = 400;
+    private static final int WIZARD_HP_LVL = 30;
+    private static final int FIREBLAST_DMG = 350;
+    private static final int FIREBLAST_DMG_PER_LVL = 50;
+    private static final int IGNITE_DMG = 150;
+    private static final int IGNITE_DMG_PER_LVL = 20;
+    private static final int IGNITE_ROUND_DMG = 50;
+    private static final int IGNITE_ROUND_LVL_DMG = 30;
+    private static final int IGNITE_DURATION = 2;
+    private static final int EXECUTE_DMG = 200;
+    private static final int EXECUTE_DMG_PER_LVL = 30;
+    private static final float EXECUTE_LOW_HP_LIMIT = 0.2f;
+    private static final float EXECUTE_LVL_HP_LIMIT = 0.01f;
+    private static final float EXECUTE_MAX_HP_LIMIT = 0.4f;
+    private static final int SLAM_DMG = 100;
+    private static final int SLAM_DMG_PER_LVL = 40;
+    private static final int SLAM_DURATION = 1;
+    private static final float DRAIN_DMG = 0.2f;
+    private static final float DRAIN_DMG_PER_LVL = 0.05f;
+    private static final float DRAIN_HP_LIMIT = 0.3f;
+    private static final float DEFLECT_DMG = 0.35f;
+    private static final float DEFLECT_DMG_PER_LVL = 0.02f;
+    private static final int BACKSTAB_DMG = 200;
+    private static final int BACKSTAB_DMG_PER_LVL = 20;
+    private static final float BACKSTAB_CRITICAL = 1.5f;
+    private static final int PARALYSIS_DMG = 40;
+    private static final int PARALYSIS_DMG_PER_LVL = 10;
+    private static final int PARALYSIS_DURATION = 3;
+    private static final int PASALYSISWOODS = 6;
+    private static final float BACKSTAB_R = 1.2f;
+    private static final float BACKSTAB_K = 0.9f;
+    private static final float BACKSTAB_P = 1.25f;
+    private static final float BACKSTAB_W = 1.25f;
+    private static final float DEFLECT_R = 1.2f;
+    private static final float DEFLECT_K = 1.4f;
+    private static final float DEFLECT_P = 1.3f;
+    private static final float DEFLECT_W = 0.0f;
+    private static final float DRAIN_R = 0.8f;
+    private static final float DRAIN_K = 1.2f;
+    private static final float DRAIN_P = 0.9f;
+    private static final float DRAIN_W = 1.05f;
+    private static final float EXECUTE_R = 1.15f;
+    private static final float EXECUTE_K = 1f;
+    private static final float EXECUTE_P = 1.1f;
+    private static final float EXECUTE_W = 0.8f;
+    private static final float FIREBLAST_R = 0.8f;
+    private static final float FIREBLAST_K = 1.2f;
+    private static final float FIREBLAST_P = 0.9f;
+    private static final float FIREBLAST_W = 1.05f;
+    private static final float IGNITE_R = 0.8f;
+    private static final float IGNITE_K = 1.2f;
+    private static final float IGNITE_P = 0.9f;
+    private static final float IGNITE_W = 1.05f;
+    private static final float PARALYSIS_R = 0.9f;
+    private static final float PARALYSIS_K = 0.8f;
+    private static final float PARALYSIS_P = 1.2f;
+    private static final float PARALYSIS_W = 1.25f;
+    private static final float SLAM_R = 0.8f;
+    private static final float SLAM_K = 1.2f;
+    private static final float SLAM_P = 0.9f;
+    private static final float SLAM_W = 1.05f;
+    private static final float VOLCANIC_MOD = 1.25f;
+    private static final float LAND_MOD = 1.15f;
+    private static final float DESERT_MOD = 1.1f;
+    private static final float WOODS_MOD = 1.15f;
+
+    public static float getVolcanicMod() {
+        return VOLCANIC_MOD;
+    }
+
+    public static float getLandMod() {
+        return LAND_MOD;
+    }
+
+    public static float getDesertMod() {
+        return DESERT_MOD;
+    }
+
+    public static float getWoodsMod() {
+        return WOODS_MOD;
+    }
 
     public static int getParalysisDmg() {
-        return paralysisDmg;
+        return PARALYSIS_DMG;
     }
 
     public static int getParalysisDmgPerLvl() {
-        return paralysisDmgPerLvl;
+        return PARALYSIS_DMG_PER_LVL;
     }
 
     public static int getParalysisDuration() {
-        return paralysisDuration;
+        return PARALYSIS_DURATION;
     }
 
-    public static int getParalysisWoodsDuration() {
-        return paralysisWoodsDuration;
-    }
-
-    public static int getBackstabCriticalGO() {
-        return backstabCriticalGO;
+    public static int getPasalysiswoods() {
+        return PASALYSISWOODS;
     }
 
     public static float getDeflectDmg() {
-        return deflectDmg;
+        return DEFLECT_DMG;
     }
 
     public static float getDeflectDmgPerLvl() {
-        return deflectDmgPerLvl;
-    }
-
-    public static float getDeflectLimit() {
-        return deflectLimit;
+        return DEFLECT_DMG_PER_LVL;
     }
 
     public static int getBackstabDmg() {
-        return backstabDmg;
+        return BACKSTAB_DMG;
     }
 
     public static int getBackstabDmgPerLvl() {
-        return backstabDmgPerLvl;
+        return BACKSTAB_DMG_PER_LVL;
     }
 
     public static float getBackstabCritical() {
-        return backstabCritical;
+        return BACKSTAB_CRITICAL;
     }
 
-    public static int getBaseXP() {
-        return baseXP;
+    public static int getBasexp() {
+        return BASEXP;
     }
 
     public static int getLvlOneConst() {
-        return lvlOneConst;
+        return LVL_ONE_CONST;
     }
 
     public static int getLvlMultiplier() {
-        return lvlMultiplier;
+        return LVL_MULTIPLIER;
     }
 
     public static int getBaseLvl() {
-        return baseLvl;
+        return BASE_LVL;
     }
 
-    public static int getPyromancerHP() {
-        return pyromancerHP;
+    public static int getPyromancerHp() {
+        return PYROMANCER_HP;
     }
 
-    public static int getPyromancerHPperLvl() {
-        return pyromancerHPperLvl;
+    public static int getPyromancerHpPerLvl() {
+        return PYROMANCER_HP_PER_LVL;
     }
 
-    public static int getKnightHP() {
-        return knightHP;
+    public static int getKnightHp() {
+        return KNIGHT_HP;
     }
 
-    public static int getKnightHPperLvl() {
-        return knightHPperLvl;
+    public static int getKnightHpLvl() {
+        return KNIGHT_HP_LVL;
     }
 
-    public static int getRogueHP() {
-        return rogueHP;
+    public static int getRogueHp() {
+        return ROGUE_HP;
     }
 
-    public static int getRogueHPperLvl() {
-        return rogueHPperLvl;
+    public static int getRogueHpLvl() {
+        return ROGUE_HP_LVL;
     }
 
-    public static int getWizardHP() {
-        return wizardHP;
+    public static int getWizardHp() {
+        return WIZARD_HP;
     }
 
-    public static int getWizardHPperLvl() {
-        return wizardHPperLvl;
+    public static int getWizardHpLvl() {
+        return WIZARD_HP_LVL;
     }
 
     public static int getFireblastDmg() {
-        return fireblastDmg;
+        return FIREBLAST_DMG;
     }
 
     public static int getFireblastDmgPerLvl() {
-        return fireblastDmgPerLvl;
+        return FIREBLAST_DMG_PER_LVL;
     }
 
     public static int getIgniteDmg() {
-        return igniteDmg;
+        return IGNITE_DMG;
     }
 
     public static int getIgniteDmgPerLvl() {
-        return igniteDmgPerLvl;
+        return IGNITE_DMG_PER_LVL;
     }
 
     public static int getIgniteRoundDmg() {
-        return igniteRoundDmg;
+        return IGNITE_ROUND_DMG;
     }
 
     public static int getIgniteRoundLvlDmg() {
-        return igniteRoundLvlDmg;
+        return IGNITE_ROUND_LVL_DMG;
     }
 
     public static int getIgniteDuration() {
-        return igniteDuration;
+        return IGNITE_DURATION;
     }
 
     public static int getExecuteDmg() {
-        return executeDmg;
+        return EXECUTE_DMG;
     }
 
     public static int getExecuteDmgPerLvl() {
-        return executeDmgPerLvl;
+        return EXECUTE_DMG_PER_LVL;
     }
 
-    public static float getExecuteLowHPLimit() {
-        return executeLowHPLimit;
+    public static float getExecuteLowHpLimit() {
+        return EXECUTE_LOW_HP_LIMIT;
     }
 
-    public static float getExecuteLvlHPLimit() {
-        return executeLvlHPLimit;
+    public static float getExecuteLvlHpLimit() {
+        return EXECUTE_LVL_HP_LIMIT;
     }
 
-    public static float getExecuteMaxHPLimit() {
-        return executeMaxHPLimit;
+    public static float getExecuteMaxHpLimit() {
+        return EXECUTE_MAX_HP_LIMIT;
     }
 
     public static int getSlamDmg() {
-        return slamDmg;
+        return SLAM_DMG;
     }
 
     public static int getSlamDmgPerLvl() {
-        return slamDmgPerLvl;
+        return SLAM_DMG_PER_LVL;
     }
 
     public static int getSlamDuration() {
-        return slamDuration;
+        return SLAM_DURATION;
     }
 
     public static float getDrainDmg() {
-        return drainDmg;
+        return DRAIN_DMG;
     }
 
     public static float getDrainDmgPerLvl() {
-        return drainDmgPerLvl;
+        return DRAIN_DMG_PER_LVL;
     }
 
-    public static float getDrainHPLimit() {
-        return drainHPLimit;
+    public static float getDrainHpLimit() {
+        return DRAIN_HP_LIMIT;
+    }
+
+    public static int getPASALYSISWOODS() {
+        return PASALYSISWOODS;
+    }
+
+    public static float getBackstabR() {
+        return BACKSTAB_R;
+    }
+
+    public static float getBackstabK() {
+        return BACKSTAB_K;
+    }
+
+    public static float getBackstabP() {
+        return BACKSTAB_P;
+    }
+
+    public static float getBackstabW() {
+        return BACKSTAB_W;
+    }
+
+    public static float getDeflectR() {
+        return DEFLECT_R;
+    }
+
+    public static float getDeflectK() {
+        return DEFLECT_K;
+    }
+
+    public static float getDeflectP() {
+        return DEFLECT_P;
+    }
+
+    public static float getDeflectW() {
+        return DEFLECT_W;
+    }
+
+    public static float getDrainR() {
+        return DRAIN_R;
+    }
+
+    public static float getDrainK() {
+        return DRAIN_K;
+    }
+
+    public static float getDrainP() {
+        return DRAIN_P;
+    }
+
+    public static float getDrainW() {
+        return DRAIN_W;
+    }
+
+    public static float getExecuteR() {
+        return EXECUTE_R;
+    }
+
+    public static float getExecuteK() {
+        return EXECUTE_K;
+    }
+
+    public static float getExecuteP() {
+        return EXECUTE_P;
+    }
+
+    public static float getExecuteW() {
+        return EXECUTE_W;
+    }
+
+    public static float getFireblastR() {
+        return FIREBLAST_R;
+    }
+
+    public static float getFireblastK() {
+        return FIREBLAST_K;
+    }
+
+    public static float getFireblastP() {
+        return FIREBLAST_P;
+    }
+
+    public static float getFireblastW() {
+        return FIREBLAST_W;
+    }
+
+    public static float getIgniteR() {
+        return IGNITE_R;
+    }
+
+    public static float getIgniteK() {
+        return IGNITE_K;
+    }
+
+    public static float getIgniteP() {
+        return IGNITE_P;
+    }
+
+    public static float getIgniteW() {
+        return IGNITE_W;
+    }
+
+    public static float getParalysisR() {
+        return PARALYSIS_R;
+    }
+
+    public static float getParalysisK() {
+        return PARALYSIS_K;
+    }
+
+    public static float getParalysisP() {
+        return PARALYSIS_P;
+    }
+
+    public static float getParalysisW() {
+        return PARALYSIS_W;
+    }
+
+    public static float getSlamR() {
+        return SLAM_R;
+    }
+
+    public static float getSlamK() {
+        return SLAM_K;
+    }
+
+    public static float getSlamP() {
+        return SLAM_P;
+    }
+
+    public static float getSlamW() {
+        return SLAM_W;
     }
 }

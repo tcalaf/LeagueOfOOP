@@ -1,13 +1,13 @@
 package map;
 
-import gameEngine.Position;
+import game.Position;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class MiniMap {
+public final class MiniMap {
     private int rows;
     private int columns;
     private Terrain[][] map;
@@ -27,17 +27,20 @@ public class MiniMap {
         return columns;
     }
 
-    Terrain getTerrain(Position position) {
+    public Terrain getTerrain(final Position position) {
         return map[position.getRow()][position.getColumn()];
     }
 
-    public MiniMap(int rows, int columns, ArrayList<String> type) {
+    public MiniMap(final int rows, final int columns, final ArrayList<String> type) {
         this.rows = rows;
         this.columns = columns;
         map = new Terrain[rows][columns];
-        for (int row = 0; row < rows; row++)
-            for (int column = 0; column < columns; column++)
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
+                // Pair char - terrain type
                 map[row][column] = terrainType.get(type.get(row).charAt(column));
+            }
+        }
     }
 
 

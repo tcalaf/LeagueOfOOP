@@ -1,0 +1,5 @@
+Starting audit...
+[ERROR] /home/tudor/IdeaProjects/LeagueOfOOP/src/heropack/Hero.java:71:48: 'overTimeDmg' hides a field. [HiddenField]
+[ERROR] /home/tudor/IdeaProjects/LeagueOfOOP/src/main/Main.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+Audit done.
+Checkstyle ends with 2 errors.

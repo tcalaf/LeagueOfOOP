@@ -1,0 +1,26 @@
+Calafeteanu Tudor-Alexandru
+322CD
+Etapa 1
+= League of OOP =
+
+ - Simulam un joc RPG, citim din fisierul input harta, punem jucatorii 
+intr un vector de eroi, le salvam pozitia initiala. Citim apoi rundele,
+precum si schimbarea pozitiei eroilor la fiecare runda.
+ - Un jucator este descris printr-un hp, xp, pozitia lui pe mapa, abilitatile
+sale. In timpul luptei el poate fi afectat atat in runda respectiva, cat si pe
+durata mai multor runde. De aceea, trebuie sa retinem durata si dauna primita.
+ - El ataca alti jucatori printr-o functie 'fight', care, de fapt, "trimite"
+catre oponent abilitatile sale. Fiecare skill are un comportament diferit, 
+poate fi afectat de pozitia pe mapa (land modifier), clasa oponentului 
+(race modifier), de experienta celui care ataca, etc.
+ - Pozitia fiecarui jucator este retinuta intr-o clasa Position, avand o
+coordonata x si o coordonata y
+ - Eroii sunt generati printr-un design pattern visitor, pentru a simplifica
+procesul de instantiere
+ - Clasa Hero se poate extinde, de aceea avem 4 subclase, fiecare
+reprezentand cate un caracter diferit.
+ - La inceputul unei runde, toti jucatorii care nu sunt afectati de paralizie,
+isi pot modifica pozitia pe harta. Apoi, sunt afectati de skill-urile
+care dureaza mai multe runde. In final, se cauta jucatorii aflati in aceeasi
+pozitie pe harta si incepe lupta. Vrajitorul va ataca mareu ultimul, avand
+in vedere ca are un skill care se foloseste de dauna primita de la oponent.
